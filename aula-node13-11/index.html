@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koema Sushi - Culinária Japonesa Autêntica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home">
+                        <!-- IMAGEM CORRIGIDA AQUI -->
+                        <img src="images/logo-icon.jpg" alt="Koenma Sushi" class="logo-icon">
+                        <span class="logo-text">Koenma Sushi</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+    <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
+    <li><a href="#menu"><i class="fas fa-utensils"></i> Cardápio</a></li>
+    <li><a href="#about"><i class="fas fa-info-circle"></i> Sobre</a></li>
+    <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+    <li>
+        <a href="#" class="cart-icon" id="cart-toggle">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </a>
+    </li>
+</ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrinho de Compras -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Itens do carrinho serão inseridos aqui via JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: R$ <span id="cart-total-price">0.00</span></p>
+            <button class="checkout-btn" id="checkout-btn">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <!-- Seção Home com Carrossel -->
+    <section id="home" class="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sushi Variado">
+                    <div class="slide-content">
+                        <h2>Sushi Fresco e Autêntico</h2>
+                        <p>Experimente o verdadeiro sabor do Japão</p>
+                        <a href="#menu" class="btn">Ver Cardápio</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://www.infoescola.com/wp-content/uploads/2011/01/sashimi_319387313.jpg" alt="Sashimi">
+                    <div class="slide-content">
+                        <h2>Sashimi Premium</h2>
+                        <p>Peixes selecionados e cortados na perfeição</p>
+                        <a href="#menu" class="btn">Ver Cardápio</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://media.istockphoto.com/id/612002744/pt/foto/salmon-temaki-ginger-and-sauce-horizontal-top-view.jpg?s=612x612&w=0&k=20&c=NzzQeEqkIJ5XshXsju01YIwW_QUeqATB-p8KCYPSXeE=" alt="Temaki">
+                    <div class="slide-content">
+                        <h2>Temaki Especial</h2>
+                        <p>Cones recheados com ingredientes frescos</p>
+                        <a href="#menu" class="btn">Ver Cardápio</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" id="prev-btn">&#10094;</button>
+            <button class="carousel-btn next" id="next-btn">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Cardápio -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Nosso Cardápio</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="sushi">Sushi</button>
+                <button class="category-btn" data-category="sashimi">Sashimi</button>
+                <button class="category-btn" data-category="temaki">Temaki</button>
+                <button class="category-btn" data-category="hot">Pratos Quentes</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+            </div>
+            <div class="menu-items" id="menu-items">
+                <!-- Itens do menu serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre o Koenma Sushi</h2>
+                    <p>Há mais de 15 anos, o Koenma Sushi traz a autêntica culinária japonesa para os amantes da gastronomia. Nossos chefs são treinados no Japão e utilizam apenas ingredientes frescos e de alta qualidade.</p>
+                    <p>Nosso compromisso é oferecer uma experiência gastronômica única, combinando tradição e inovação em cada prato.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-fish"></i>
+                            <h3>Ingredientes Frescos</h3>
+                            <p>Peixes selecionados diariamente</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-chef"></i>
+                            <h3>Chefs Especializados</h3>
+                            <p>Profissionais com experiência no Japão</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Ambiente Aconchegante</h3>
+                            <p>Decoração inspirada na cultura japonesa</p>
+                        </div>
+                    </div>
+                </div>
+               
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Taguatinga Norte<br>Brasilia-DF</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(61) 99458-4504</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda a Sábado: 11h às 23h<br>Domingo: 12h às 22h</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Seu telefone">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Sua mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Koenma Sushi</h3>
+                    <p>A melhor experiência em culinária japonesa da cidade.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#menu">Cardápio</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Koenma Sushi. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
